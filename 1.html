@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <div id="fir">
+<input type="text"  v-model="msg">请输入
+<h1>{{msg}}</h1>
+  </div>
+  
+
+   <div  id="sec">
+<input type="text" v-model="msg">请再次输入
+<h1>{{msg}}</h1>
+   </div>
+
+  <script src="vue/vue.js"></script>
+  <script>
+
+ new Vue({
+  
+  el:"#fir" ,
+  data:{
+     msg:"这是第一次初始输入",
+
+
+   
+  }
+  
+
+ })
+
+ setTimeout(() => {
+   vue.msg  = "Digby"
+ }, 3000);
+
+ const vue = new  Vue({
+  el:"#sec",
+  data:{
+    msg:"这是第二"
+  }
+
+ })
+
+
+
+
+
+  </script>
+</body>
+</html>
